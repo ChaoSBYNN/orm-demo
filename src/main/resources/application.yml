@@ -1,0 +1,17 @@
+server:
+    port: 8080
+spring:
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        password: root
+        url: jdbc:mysql://127.0.0.1:3306/test_user?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+        username: root
+    jpa:
+        database: MYSQL
+        hibernate:
+            ddl-auto: update
+            naming-strategy: org.hibernate.cfg.DefaultNamingStrategy
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        show-sql: true
