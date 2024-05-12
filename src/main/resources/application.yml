@@ -2,7 +2,7 @@ server:
     port: 8080
 spring:
     datasource:
-        driverClassName: com.mysql.cj.jdbc.Driver
+        driver-class-name: com.mysql.cj.jdbc.Driver
         password: root
         url: jdbc:mysql://127.0.0.1:3306/test_user?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
         username: root
@@ -15,3 +15,7 @@ spring:
             hibernate:
                 dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         show-sql: true
+
+#配置mapper xml的路径
+mybatis-plus:
+    mapper-locations:classpath:org/example/orm/**/mybatis/*.xml

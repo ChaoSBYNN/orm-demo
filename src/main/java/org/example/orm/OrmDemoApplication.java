@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories
-@MapperScan("org.example.orm")
+@MapperScan("org.example.orm.**.mybatis")
 public class OrmDemoApplication {
 
     public static void main(String[] args) {

@@ -31,6 +31,15 @@ public class UserController {
         return userService.listByMybatis();
     }
 
+    /**
+     * 查询所有user
+     * @return
+     */
+    @GetMapping("/listByName/{name}")
+    public List<User> listByName(@PathVariable("name")  String name){
+        return userService.getByName(name);
+    }
+
 }
  
  

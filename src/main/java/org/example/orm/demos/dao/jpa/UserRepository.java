@@ -20,8 +20,8 @@ public interface UserRepository extends JpaRepository<User,Integer> {
 
     List<User> getByName(String name);
 
-    @Query(value = "select * from user where name = ?", nativeQuery = true)
-    List<User> getByNameAnnotation(String name);
+//    @Query(value = "select * from user where name =:name", nativeQuery = true)
+//    List<User> getByNameAnnotation(String name);
 
 }
 
