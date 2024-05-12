@@ -10,7 +10,7 @@ import java.util.List;
 public interface UserMapper extends BaseMapper<User> {
 
     @Select("select * from user where name = #{name}")
-    List<User> getByName(@Param("name") String name);
+    List<User> getByNameAnnotation(@Param("name") String name);
 
     List<User> getByNameXML(@Param("name") String name);
 }

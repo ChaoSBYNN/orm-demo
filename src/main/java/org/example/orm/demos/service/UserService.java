@@ -32,17 +32,22 @@ public class UserService {
     }
 
     public List<User> getByName(String name) {
+
         // JPA
         userRepository.getByName(name);
 
-        // Mybatis Annotation
-        userMapper.getByName(name);
+        // JPA Annotation
+        userRepository.getByNameAnnotation(name);
 
         // Mybatis Wrapper
         userMapper.selectList(Wrappers.<User>lambdaQuery().eq(User::getName, name));
 
-        // Mybatis xml
+        // Mybatis Annotation
+        userMapper.getByNameAnnotation(name);
+
+        // Mybatis XML
         userMapper.getByNameXML(name);
+
         return null;
     }
 
